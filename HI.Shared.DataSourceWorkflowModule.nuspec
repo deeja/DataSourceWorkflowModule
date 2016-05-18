@@ -5,6 +5,8 @@
     <version>0.0.0</version>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>Sitecore DataSource Workflow</tags>
+    <description>Promote Datasource item with parent workflow</description>
+    <authors>ASOS</authors>
   </metadata>
   <files>
     <file src="bin\**" target="bin" exclude="bin\**\*.xml" />
