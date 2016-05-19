@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HI.Shared.DataSourceWorkflowModule", "HI.Shared.DataSourceWorkflowModule.csproj", "{60D38817-3C31-4DB7-958D-71B21898FDC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7FD24DEB-453B-458F-9339-E29E2BBB203F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{7D3A2D6D-4D7C-45FA-ADAB-48B6103C99AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HI.Shared.DataSourceWorkflowModule.UnitTests", "..\HI.Shared.DataSourceWorkflowModule.UnitTests\HI.Shared.DataSourceWorkflowModule.UnitTests.csproj", "{2CB23407-6BA1-4A1D-AB8A-237FB959B593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +21,16 @@ Global
 		{60D38817-3C31-4DB7-958D-71B21898FDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60D38817-3C31-4DB7-958D-71B21898FDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60D38817-3C31-4DB7-958D-71B21898FDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB23407-6BA1-4A1D-AB8A-237FB959B593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB23407-6BA1-4A1D-AB8A-237FB959B593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB23407-6BA1-4A1D-AB8A-237FB959B593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB23407-6BA1-4A1D-AB8A-237FB959B593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D3A2D6D-4D7C-45FA-ADAB-48B6103C99AE} = {7FD24DEB-453B-458F-9339-E29E2BBB203F}
+		{2CB23407-6BA1-4A1D-AB8A-237FB959B593} = {7D3A2D6D-4D7C-45FA-ADAB-48B6103C99AE}
 	EndGlobalSection
 EndGlobal
