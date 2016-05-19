@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7FD24DEB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{7D3A2D6D-4D7C-45FA-ADAB-48B6103C99AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HI.Shared.DataSourceWorkflowModule.UnitTests", "..\HI.Shared.DataSourceWorkflowModule.UnitTests\HI.Shared.DataSourceWorkflowModule.UnitTests.csproj", "{2CB23407-6BA1-4A1D-AB8A-237FB959B593}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HI.Shared.DataSourceWorkflowModule.UnitTests", "Tests\HI.Shared.DataSourceWorkflowModule.UnitTests\HI.Shared.DataSourceWorkflowModule.UnitTests.csproj", "{2CB23407-6BA1-4A1D-AB8A-237FB959B593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
