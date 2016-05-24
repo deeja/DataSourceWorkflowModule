@@ -135,7 +135,7 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="App_Config\Include\DataSourceWorkflowModule\Z_EditorDataSourceWorkflowNotifications.config" />
+    <Content Include="App_Config\Include\DataSourceWorkflowModule\Z_EditorDataSourceWorkflowNotifications.config" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
