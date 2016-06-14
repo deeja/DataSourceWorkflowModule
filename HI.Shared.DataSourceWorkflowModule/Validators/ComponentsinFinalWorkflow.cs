@@ -9,6 +9,8 @@ using System.Linq.Expressions;
 
 namespace HI.Shared.DataSourceWorkflowModule.Validators
 {
+    using Sitecore.Mvc.Extensions;
+
     [Serializable]
     public class ComponentsinFinalWorkflow : StandardValidator
     {
@@ -90,7 +92,16 @@ namespace HI.Shared.DataSourceWorkflowModule.Validators
 
         protected override ValidatorResult GetMaxValidatorResult()
         {
-            return ValidatorResult.Warning;
+            var result = ValidatorResult.Warning;
+            
+            if (Parameters == null || Parameters["Severity"].IsWhiteSpaceOrNull())
+            {
+                return result;
+            }
+
+            Enum.TryParse(Parameters["Severity"], out result);
+            
+            return result;
         }
 
         #endregion
