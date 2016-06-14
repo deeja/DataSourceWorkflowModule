@@ -9,7 +9,7 @@
     <authors>ASOS</authors>
   </metadata>
   <files>
-    <file src="bin\HI.Shared.DataSourceWorkflowModule.dll" target="bin"/>
+    <file src="bin\**\HI.Shared.DataSourceWorkflowModule.dll" target="bin"/>
     <file src="App_Config\Include\DataSourceWorkflowModule\**" target="App_Config\Include\DataSourceWorkflowModule"/>
   </files>
 </package>
