@@ -12,6 +12,8 @@ using Sitecore.SecurityModel;
 
 namespace HI.Shared.DataSourceWorkflowModule.Extensions
 {
+    using Sitecore.Globalization;
+
     public static class ItemExtensions
     {	
         private const string ContentEditorUrlFormat = "{0}://{1}/sitecore/shell/Applications/Content Editor?id={2}&amp;sc_content=master&amp;fo={2}&amp;vs={3}&amp;la={4}";
@@ -26,7 +28,7 @@ namespace HI.Shared.DataSourceWorkflowModule.Extensions
             var list = new List<Item>();
             foreach (RenderingReference reference in i.GetRenderingReferences())
             {
-                list.AddUnqiueDataSourceItem(reference.GetDataSourceItem());
+                list.AddUnqiueDataSourceItem(reference.GetDataSourceItem(i.Language));
 
                 if (includePersonalizationDataSourceItems)
                 {
@@ -52,7 +54,7 @@ namespace HI.Shared.DataSourceWorkflowModule.Extensions
             List<Item> list = new List<Item>();
             foreach (RenderingReference reference in i.GetRenderingReferences())
             {
-                Item dataSourceItem = reference.GetDataSourceItem();
+                Item dataSourceItem = reference.GetDataSourceItem(i.Language);
                 if (dataSourceItem != null)
                 {
                     list.Add(dataSourceItem);
@@ -66,6 +68,15 @@ namespace HI.Shared.DataSourceWorkflowModule.Extensions
             if (reference != null)
             {
                 return GetDataSourceItem(reference.Settings.DataSource, reference.Database);
+            }
+            return null;
+        }
+
+        public static Item GetDataSourceItem(this RenderingReference reference, Language itemLanguage)
+        {
+            if (reference != null)
+            {
+                return GetDataSourceItem(reference.Settings.DataSource, reference.Database, itemLanguage);
             }
             return null;
         }
@@ -149,6 +160,14 @@ namespace HI.Shared.DataSourceWorkflowModule.Extensions
             return Guid.TryParse(id, out itemId)
                                     ? db.GetItem(new ID(itemId))
                                     : db.GetItem(id);
+        }
+
+        private static Item GetDataSourceItem(string id, Database db, Language language)
+        {
+            Guid itemId;
+            return Guid.TryParse(id, out itemId)
+                                    ? db.GetItem(new ID(itemId), language)
+                                    : db.GetItem(id, language);
         }
 
         public static string GetContentEditorUrl(this Item i)
