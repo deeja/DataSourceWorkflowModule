@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>HI.Shared.DataSourceWorkflowModule</id>
+    <version>0.0.0</version>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>Sitecore DataSource Workflow</tags>
+    <description>Promote Datasource item with parent workflow</description>
+    <authors>ASOS</authors>
+  </metadata>
+  <files>
+    <file src="bin\**\HI.Shared.DataSourceWorkflowModule.dll" target="bin"/>
+    <file src="App_Config\Include\DataSourceWorkflowModule\**" target="App_Config\Include\DataSourceWorkflowModule"/>
+  </files>
+</package>
