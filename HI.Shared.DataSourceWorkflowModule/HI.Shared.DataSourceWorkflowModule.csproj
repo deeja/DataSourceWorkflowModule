@@ -43,22 +43,31 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Analytics, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Analytics.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.ContentTesting, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.ContentTesting.NoReferences.8.2.160729\lib\NET452\Sitecore.ContentTesting.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentTesting.Model, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentTesting.Model.8.2.160729\lib\NET452\Sitecore.ContentTesting.Model.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.ExperienceEditor, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.ExperienceEditor.NoReferences.8.2.160729\lib\NET452\Sitecore.ExperienceEditor.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.160729\lib\NET452\Sitecore.Kernel.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Logging, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Logging.NoReferences.8.2.160729\lib\NET452\Sitecore.Logging.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
@@ -100,9 +109,6 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Packages\8\Datasource Workflow Module 8.zip" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 
 namespace HI.Shared.DataSourceWorkflowModule.Validators
 {
-    using Sitecore.Mvc.Extensions;
+    
 
     [Serializable]
     public class ComponentsinFinalWorkflow : StandardValidator
@@ -94,7 +94,7 @@ namespace HI.Shared.DataSourceWorkflowModule.Validators
         {
             var result = ValidatorResult.Warning;
             
-            if (Parameters == null || Parameters["Severity"].IsWhiteSpaceOrNull())
+            if (Parameters == null || string.IsNullOrWhiteSpace(Parameters["Severity"]))
             {
                 return result;
             }
